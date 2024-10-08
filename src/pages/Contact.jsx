@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Building, Phone, Mail, MapPin } from 'lucide-react';
-
+import { Building, Phone, Mail, MapPin, Clock } from 'lucide-react';
 import ContactInfo from '../components/ContactInfo';
 import { office, warehouse } from '../api/data';
 import logo from '../assets/westrade_logo_no_bg.png';
@@ -10,13 +9,13 @@ const ContactPage = () => {
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto ">
         <h1 className="text-3xl md:text-4xl font-extrabold text-darkBlue mb-8 text-center">
-          Get In Touch
+          Contact Us
         </h1>
 
-        <div className=" shadow-lg rounded-xl overflow-hidden bg-lightBlue bg-opacity-50 ">
+        <div className="shadow-lg rounded-xl overflow-hidden bg-lightBlue bg-opacity-50">
           {/* Company Info */}
-          <div className="p-8 ">
-            <div className="flex justify-center mb-4">
+          <div className="p-8">
+            <div className="flex justify-center mb-6">
               <img src={logo} alt="Westrade Logo" className="h-20" />
             </div>
             <h2 className="text-xl md:text-2xl font-semibold text-center text-darkBlue mb-6">
@@ -27,21 +26,38 @@ const ContactPage = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <ContactInfo
                 icon={<Building />}
-                title="Office"
+                title="Office Address"
                 content={[
                   "5F Unit 503 Raffles Corporate Center,",
                   "F. Ortigas Jr. Road, Ortigas Center,",
                   "Pasig City"
                 ]}
               />
-              <ContactInfo
+                <ContactInfo
                 icon={<MapPin />}
-                title="Warehouse"
+                title="Warehouse Location"
                 content={[
-                  "No. 3 Bayanihan Drive Bayanihan Village,",
-                  "Brgy. San Isidro, Cainta, Rizal"
+                  "No. 3 Bayanihan Drive,",
+                  "Bayanihan Village, Brgy. San Isidro,",
+                  "Cainta, Rizal"
                 ]}
               />
+              <ContactInfo
+                icon={<Clock />}
+                title="Office Hours"
+                content={[
+                  "Monday - Friday: 9:00 AM - 5:00 PM",
+                  "Saturday: 9:00 AM - 12:00 PM"
+                ]}
+              />
+              <ContactInfo
+                icon={<Clock />}
+                title="Warehouse Hours"
+                content={[
+                  "Monday - Saturday: 9:00 AM - 5:00 PM"
+                ]}
+              />
+
               <ContactInfo
                 icon={<Phone />}
                 title="Phone Numbers"
@@ -53,16 +69,16 @@ const ContactPage = () => {
               />
               <ContactInfo
                 icon={<Mail />}
-                title="Email"
+                title="Email Addresses"
                 content={["cables@westrade.ph", "inquiry@westrade.ph"]}
               />
+
             </div>
           </div>
 
           {/* Map Section */}
-          {/* Office */}
           <div className="w-full h-[300px] md:h-[400px] mt-8">
-            <h1 className='text-darkBlue font-bold text-2xl p-6 text-center'>OFFICE</h1> 
+            <h1 className='text-darkBlue font-bold text-2xl p-6 text-center'>OFFICE LOCATION</h1> 
             <iframe
               className="w-full h-full"
               src={office}
@@ -70,9 +86,9 @@ const ContactPage = () => {
               loading="lazy"
             ></iframe>
           </div>
-          {/* warehouse */}
+
           <div className="w-full h-[300px] md:h-[400px] mt-32">
-            <h1 className='text-darkBlue font-bold text-2xl p-6 text-center'>WAREHOUSE</h1>
+            <h1 className='text-darkBlue font-bold text-2xl p-6 text-center'>WAREHOUSE LOCATION</h1>
             <iframe
               className="w-full h-full"
               src={warehouse}
@@ -85,8 +101,5 @@ const ContactPage = () => {
     </div>
   );
 };
-
-// ContactInfo component remains unchanged
-
 
 export default ContactPage;
