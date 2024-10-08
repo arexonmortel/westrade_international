@@ -23,7 +23,7 @@ function Header() {
           <NavLink to= '/'>
           <div className="flex items-center justify-center" onClick={scrollTop}>
           <img src={logo} alt="Westrade Logo" className="h-10 w-10 mr-2" />
-          <p className="text-sm md:text-xl font-bold text-royalBlue">Westrade International Co., Inc.</p>
+          <p className="text-lg md:text-xl font-bold text-royalBlue">Westrade International Co., Inc.</p>
         </div>
           </NavLink>
 
