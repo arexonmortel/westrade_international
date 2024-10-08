@@ -8,7 +8,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-gradient-to-r from-blue-100 to-royalBlue ">
+      <div className="flex flex-col min-h-screen bg-gradient-to-r from-white via-lightBlue to-royalBlue">
         <Header />
         <main className="flex-grow z-40 flex items-center justify-center">
           <Routes>

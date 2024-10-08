@@ -2,7 +2,7 @@
 import { Building, Phone, Mail, MapPin } from 'lucide-react';
 
 import ContactInfo from '../components/ContactInfo';
-import { office } from '../api/data';
+import { office, warehouse } from '../api/data';
 import logo from '../assets/westrade_logo_no_bg.png';
  
 const ContactPage = () => {
@@ -54,16 +54,28 @@ const ContactPage = () => {
               <ContactInfo
                 icon={<Mail />}
                 title="Email"
-                content={["westradecables@yahoo.com"]}
+                content={["cables@westrade.ph", "inquiry@westrade.ph"]}
               />
             </div>
           </div>
 
           {/* Map Section */}
+          {/* Office */}
           <div className="w-full h-[300px] md:h-[400px] mt-8">
+            <h1 className='text-darkBlue font-bold text-2xl p-6 text-center'>OFFICE</h1> 
             <iframe
               className="w-full h-full"
               src={office}
+              allowFullScreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          {/* warehouse */}
+          <div className="w-full h-[300px] md:h-[400px] mt-40">
+            <h1 className='text-darkBlue font-bold text-2xl p-6 text-center'>WAREHOUSE</h1>
+            <iframe
+              className="w-full h-full"
+              src={warehouse}
               allowFullScreen
               loading="lazy"
             ></iframe>
