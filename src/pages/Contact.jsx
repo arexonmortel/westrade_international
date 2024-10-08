@@ -71,7 +71,7 @@ const ContactPage = () => {
             ></iframe>
           </div>
           {/* warehouse */}
-          <div className="w-full h-[300px] md:h-[400px] mt-40">
+          <div className="w-full h-[300px] md:h-[400px] mt-32">
             <h1 className='text-darkBlue font-bold text-2xl p-6 text-center'>WAREHOUSE</h1>
             <iframe
               className="w-full h-full"
