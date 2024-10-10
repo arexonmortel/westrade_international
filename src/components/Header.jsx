@@ -1,10 +1,31 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSpring, animated } from '@react-spring/web';
 import logo from '../assets/westrade_logo_no_bg.png';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Function to check screen size
+    const handleResize = () => {
+      if (window.innerWidth <= 768) { // Mobile screen size
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Call the function to check the initial size
+    handleResize();
+
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const slideAnimation = useSpring({
     width: isMenuOpen ? '40%' : '0%',
@@ -125,7 +146,11 @@ function Header() {
             Products
           </a>
           <a
-            href='https://www.facebook.com/WestradeInternationalCoInc/photos_albums'
+            href={
+            isMobile 
+          ? 'https://www.facebook.com/WestradeInternationalCoInc' 
+          : 'https://www.facebook.com/photo/?fbid=252139054908127&set=a.252139011574798'
+          }
             target='_blank'
             
             onClick={() => setIsMenuOpen(false)}
