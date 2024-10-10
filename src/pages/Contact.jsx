@@ -70,7 +70,7 @@ const ContactPage = () => {
               <ContactInfo
                 icon={<Mail />}
                 title="Email Addresses"
-                content={["cables@westrade.ph", "inquiry@westrade.ph"]}
+                content={["inquiry@westrade.ph"]}
               />
 
             </div>
