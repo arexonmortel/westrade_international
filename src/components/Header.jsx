@@ -42,7 +42,7 @@ function Header() {
             </NavLink>
             <a  
                 onClick = {scrollTop}
-                href="https://www.facebook.com/media/set/?set=a.1039900971256749&type=3"  // WESTRADE FB page link
+                href="https://www.facebook.com/share/p/mrN1hE98mobF23b6/"  // WESTRADE FB page link
                 target="_blank"  // Opens the link in a new tab
                 rel="noopener noreferrer"  // Security feature for external links
               className="max-w-fit relative hover:no-underline hover:text-white before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:bg-white before:origin-left before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300 "
