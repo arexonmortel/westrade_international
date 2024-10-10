@@ -137,7 +137,7 @@ function Header() {
             About 
           </NavLink>
           <a
-            href="https://www.facebook.com/photo/?fbid=252139054908127&set=a.252139011574798"
+            href="https://www.facebook.com/share/p/mrN1hE98mobF23b6/"
             target='_blank'
             rel="noopener noreferrer" 
             onClick={() => setIsMenuOpen(false)}
@@ -146,11 +146,7 @@ function Header() {
             Products
           </a>
           <a
-            href={
-            isMobile 
-          ? 'https://www.facebook.com/WestradeInternationalCoInc' 
-          : 'https://www.facebook.com/photo/?fbid=252139054908127&set=a.252139011574798'
-          }
+            href='https://www.facebook.com/WestradeInternationalCoInc/events'
             target='_blank'
             
             onClick={() => setIsMenuOpen(false)}
